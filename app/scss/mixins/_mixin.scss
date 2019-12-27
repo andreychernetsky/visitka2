@@ -1,0 +1,37 @@
+@mixin border {
+  outline:1px solid darkgreen;
+}
+
+/*1) xs-устройство(до 576px)
+2) sm-устройство(больше или равно 576px)
+@media(min-width:576px){}
+*/
+//3) md-устройство(больше или равнр 768px)
+//@media(min-width: 768px){}
+
+//4)lg-устройства(больше или равно 992px) {}
+//@media(min-width: 992px){}
+
+//5) xl устройства(больше или равно 1200px) {}
+//@media(min-width: 1200px){}
+
+
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == $sm {
+    @media(max-width:$sm){ @content }
+  }
+  @if $breakpoint == $md {
+    @media(max-width:$md){ @content }
+  }
+  @if $breakpoint == $lg {
+    @media(max-width:$lg){ @content }
+  }
+  @if $breakpoint == $xl {
+    @media(max-width:$xl){ @content }
+  }
+
+}
+
+
+

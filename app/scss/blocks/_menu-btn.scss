@@ -1,0 +1,37 @@
+.menu-btn {
+  position:fixed;
+  display: none;
+  margin: 15px 10px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  &__span,
+  &__span::before,
+  &__span::after {
+    position: absolute;
+    display: block;
+    right: 20px;
+    width: 20px;
+    height: 2px;
+    background: #777;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -1px;
+  }
+  &__span::before,
+  &__span::after {
+    content: " ";
+    display: block;
+    transition: 0.2s;
+  }
+  &__span::before {
+    transform: translateY(-5px);
+  }
+
+  &__span::after {
+    transform: translateY(5px);
+  }
+}

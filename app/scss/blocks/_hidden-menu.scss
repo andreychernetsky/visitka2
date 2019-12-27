@@ -1,0 +1,14 @@
+.hidden-menu {
+  background: #f5f6f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 110px;
+  height: 100vh;
+  width: 100vh;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  z-index: 290;
+  left: 0;
+}

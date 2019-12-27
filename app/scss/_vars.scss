@@ -1,0 +1,68 @@
+$basic-font-family: "PT Sans", "Arial", sans-serif;
+
+/*$main-bg-color: #81b3d2;
+$form-input-bg-color: #f2f2f2;
+$menu-bottom-border-color: #678fa8;*/
+//color css
+//образцы названия переменных
+//—-brand-color
+//—-gutter
+//--color-blue
+//--body-background
+//--main-background
+
+:root {
+
+  //вариант1
+  //цвета по названию
+  --white: #fff;
+
+  --light-blue-9: #9ac2db;
+  --light-blue-8: #81b3d2; //
+  --light-blue-66: #669ec0;
+  --light-blue-6: #678fa8;
+
+  --gray-1: #f2f2f2;
+  --light-gray-2: #e5e5e5;
+  --light-gray-3: #d5d5d5;
+  --grayWithAtouchOfBrown: #766357;
+  --black: #000;
+
+  //название к чему приминяется каждый цвет
+  --text: #7d7d7d;
+
+  --burger-button: var(--white);
+  --color-text: var(--black);
+
+  --bgBody:var(--white);
+  --bg-body: var(--gray-1);
+
+  --header-main: var(--white);
+  --bgInfoSection:var(--white);
+
+  --bgItem: var(--light-blue-8);
+  --itemBottomBorder: var(--light-blue-6);
+  --itemHover: var(--light-blue-8);
+  --itemHoverMb: var(--light-blue-66);
+  --clolorItem:var(--white);
+
+
+  --linkActive:var(--grayWithAtouchOfBrown);
+  --linkHover: var(--light-blue-8);
+  --colorLink: var(--black);
+  --colorLinkMenuMob:var(--white);
+
+
+  --color-icon: #c0d9e8;
+  --bloks-background: #eeeeee;
+
+  //----------------------------------------
+
+}
+
+//size
+$sm: 320px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
