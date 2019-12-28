@@ -1058,17 +1058,17 @@ body, html {
         -ms-flex-align: center;
             align-items: center;
   }
-  .main-menu .page2 .main-menu {
+  .page2 .main-menu {
     min-width: 320px;
     display: none;
     position: absolute;
     opacity: 0.3;
-    top: 9%;
+    top: 10%;
     left: 0;
     right: 0;
     background-color: black;
   }
-  .main-menu .page2 .main-menu__list {
+  .page2 .main-menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1078,18 +1078,18 @@ body, html {
             flex-direction: column;
     z-index: 400;
   }
-  .main-menu .page2 .main-menu__item {
+  .page2 .main-menu__item {
     width: 100%;
     display: block;
     text-align: center;
   }
-  .main-menu .page2 .main-menu__link {
+  .page2 .main-menu__link {
     display: block;
     line-height: 40px;
     color: #fff;
     border-bottom: 1px solid #fff;
   }
-  .main-menu .page2 .main-menu__link:hover {
+  .page2 .main-menu__link:hover {
     color: brown;
     opacity: 1;
   }
