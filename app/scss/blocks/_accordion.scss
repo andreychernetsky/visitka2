@@ -87,7 +87,17 @@
   &__link {
 
   }
+  &__descrip{
+    font-family: "PT Sans", Georgia, sans-serif;
+    line-height: 1;
+    font-size: 1.3rem;
+    color: #6a696b;
+    font-weight: 600;
+    /*padding: 0 1rem;*/
+    margin-bottom: .8rem;
+  }
   &__descrip:last-child {
     margin: 0;
+
   }
 }
