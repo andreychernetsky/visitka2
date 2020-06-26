@@ -1071,7 +1071,7 @@ body, html {
 
 .applications {
   padding: 10px;
-  width: 50%;
+  width: 60%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1131,6 +1131,42 @@ body, html {
   font-weight: 600;
   /*padding: 0 1rem;*/
   margin-bottom: 1.8rem;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.video__wrapp {
+  display: block;
+  width: 20%;
+  margin: 0 3px;
+}
+
+.video__item {
+  display: block;
 }
 
 @media (max-width: 920px) {
@@ -1280,6 +1316,10 @@ body, html {
     background-repeat: no-repeat;
     max-width: 100%;
   }
+  .applications {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 770px) {
@@ -1298,6 +1338,39 @@ body, html {
   .logo__picture {
     width: 60px;
     height: 60px;
+  }
+  .video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .video__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 3%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .video__wrapp {
+    display: block;
+    width: 95%;
+    margin-bottom: 7px;
   }
 }
 
