@@ -587,6 +587,77 @@ template {
   content: "\eac5";
 }
 
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-envelope-o:before {
+  content: "\f003";
+}
+
+.icon-check:before {
+  content: "\f00c";
+}
+
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+.icon-phone:before {
+  content: "\f095";
+}
+
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+.icon-bars:before {
+  content: "\f0c9";
+}
+
+.icon-navicon:before {
+  content: "\f0c9";
+}
+
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-quote-right:before {
+  content: "\f10e";
+}
+
+svg {
+  color: #ffc222;
+}
+
 /*1) xs-устройство(до 576px)
 2) sm-устройство(больше или равно 576px)
 @media(min-width:576px){}
@@ -918,88 +989,64 @@ body, html {
   background-color: #ffb21a;
 }
 
-.accordion {
-  padding-bottom: 130px;
-  /* with shadow */
-}
-
 .accordion__inner {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 30px 0;
+  text-align: center;
+  max-width: 100%;
 }
 
-.accordion__group {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion.shadow {
-  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-}
-
-.accordion__item {
-  width: 100%;
-}
-
-.accordion__header {
+.accordion__button {
+  /* первы вариант оформления
+    font-size: 1.1rem;
+     letter-spacing: 2px;
+     width: 100%;
+     padding: 1rem 1.5rem;
+     background: #333;
+     color: #fff;
+     cursor: pointer;
+     transition: .3s ease;
+     border: 0 none;
+     border-bottom: 1px solid #555;
+     margin: 0;*/
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   border-radius: 0;
   color: #444;
   cursor: pointer;
-  display: block;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
-  outline: medium none;
-  margin: 0;
-  padding: 10px 16px;
-  text-align: left;
-  text-decoration: none;
-  text-transform: none;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
-  vertical-align: middle;
+  padding: 15px;
+  text-align: center;
   white-space: normal;
   width: 100%;
-  /* with color */
+  max-width: 100%;
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
-.accordion__header.active, .accordion__header:hover, .accordion__header:focus {
+.accordion__button.active, .accordion__button:hover, .accordion__button:focus {
   background-color: #eee;
   color: #444;
   text-decoration: none;
 }
 
-.accordion__header.blue.active {
-  background-color: #3f51b5;
-  color: #fff;
+.accordion__link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  border-bottom: 1px solid #202c80;
+  padding: 5px 10px;
 }
 
-.accordion__header:after {
+.accordion__link:hover, .accordion__link:focus {
+  color: #7e47bb;
+  font-weight: 600;
+  border-bottom: 1px solid #520611;
+}
+
+.accordion__button:after {
   content: '\25bc';
   /* Unicode down arrow */
   font-size: 13px;
@@ -1008,35 +1055,25 @@ body, html {
   margin-left: 5px;
 }
 
-.accordion__header.active:after {
+.accordion__button.active:after {
   content: "\25b2";
   /* Unicode up arrow */
 }
 
-.accordion__header.blue.active:after {
-  color: #fff;
-}
-
 .accordion__panel {
-  background-color: #fff;
-  display: none;
-  padding: 20px;
   overflow: hidden;
-}
-
-.accordion__panel.show {
-  border-bottom: 1px solid #ddd;
-  display: block;
-}
-
-.accordion__descrip {
-  font-family: "PT Sans", Georgia, sans-serif;
-  line-height: 1;
-  font-size: 1.3rem;
-  color: #6a696b;
-  font-weight: 600;
-  /*padding: 0 1rem;*/
-  margin-bottom: .8rem;
+  width: 95%;
+  margin: auto;
+  background: #f2d1fa;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 500;
+  max-height: 0;
+  -webkit-transition: padding 0.5s, max-height 0.5s;
+  -o-transition: padding 0.5s, max-height 0.5s;
+  transition: padding 0.5s, max-height 0.5s;
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 
 .accordion__descrip:last-child {
@@ -1175,12 +1212,6 @@ body, html {
   padding-top: 30px;
 }
 
-.block-game__descrip {
-  line-height: 1.9rem;
-  padding: 0 10px 0;
-  color: #444;
-}
-
 .blockquote__one {
   background: #fff4e0;
   color: #474c4f;
@@ -1224,6 +1255,42 @@ body, html {
   text-align: center;
   font-style: normal;
   font-weight: 300;
+}
+
+.quiz {
+  margin: 30px auto;
+  width: 600px;
+  max-width: 100%;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  text-align: center;
+}
+
+.quiz__test {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.quiz__correct {
+  border: 1px solid green;
+}
+
+.quiz__incorrect {
+  border: 1px solid red;
+}
+
+.quiz__button {
+  margin-top: 20px;
+  width: auto;
+  color: #fff;
+  background-color: darkcyan;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 @media (max-width: 920px) {

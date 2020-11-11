@@ -19,6 +19,7 @@ btn.addEventListener('click',function () {
 })();
 
 // accordion
+/*
 (()=>{
   const acc = document.getElementsByClassName("accordion__header");
   let i;
@@ -30,7 +31,105 @@ btn.addEventListener('click',function () {
     }
   }
 })();
+*/
+// аккордион
+{
+  const accButton = document.querySelectorAll('.accordion__button');
+  accButton.forEach(btn => btn.addEventListener('click',()=>{
+    const openButton = btn.nextElementSibling.classList.contains('accordion__panel--open');
+    if(openButton) {
+      closeAcc(btn.nextElementSibling);
+    } else {
+      accButton.forEach(x=>closeAcc(x.nextElementSibling));
+      openAcc(btn.nextElementSibling);
+    }
+  }))
 
+  function openAcc(item) {
+    item.classList.add('accordion__panel--open');
+    item.style.maxHeight = item.scrollHeight+'px';
+    item.style.padding = '1rem auto'
+  }
+
+  function closeAcc(item) {
+    item.classList.remove('accordion__panel--open');
+    item.style.maxHeight = '0';
+    item.style.padding = '0 1.5rem 0 1.5rem';
+  }
+
+
+}
+
+// quiz
+{
+
+    const test = document.querySelector('.quiz__test');
+    const questions = [
+      {
+        text:' Сколько ступеней в До мажоре?',
+        right:7
+      },
+      {
+        text:' Назови цифровкай третью ноту в тональности До- мажор',
+        right:'E'
+      },
+      {
+        text:' Какая нота в размере четырех четвертей имеет удар по струне на 1и ?',
+        right:'четвертная'
+      },
+      {
+        text:' Какая нота пишется между четвертой и пятой линейкой?',
+        right:'ми'
+      },
+      {
+        text:'Какая нота в размере четырех четвертей имеет удар по струне на 1и 2и ?',
+        right:'половинная'
+      },
+      {
+        text:'Какая нота пишется на третьей линейке?',
+        right:'си'
+      },
+      {
+        text:'что означает цифра в кружечке?',
+        right:'номер струны'
+      }
+    ];
+    for(const question of questions) {
+      const div = document.createElement('div');
+      test.append(div);
+
+      const paragraf = document.createElement('p');
+      paragraf.textContent = question.text;
+//	div.append(paragraf);
+
+      const input = document.createElement('input');
+      input.dataset.right = question.right;
+      div.append(paragraf,input);
+    }
+    const button = document.querySelector('.quiz__button');
+    button.addEventListener('click',()=>{
+      const inputs = document.querySelectorAll('.quiz__test input');
+      let wrongCounter = 0;
+      for(const inp of inputs) {
+        inp.classList.remove('quiz__correct');
+        inp.classList.remove('quiz__incorrect');
+        if(inp.value === inp.dataset.right){
+          inp.classList.add('quiz__correct')
+        } else {
+          inp.classList.add('quiz__incorrect');
+          wrongCounter++;
+        }
+
+      }
+      if(wrongCounter > 0) {
+        button.textContent = `Осталось ответить на ${wrongCounter} вопросов`
+      } else {
+        button.textContent = 'вы ответили на все вопросы правильно';
+        button.disabled = true;
+      }
+    })
+
+}
 // прокрутка по якорям
 (()=> {
   // // собираем все якоря; устанавливаем время анимации и количество кадров
@@ -116,7 +215,7 @@ btn.addEventListener('click',function () {
 //     }
 // }
 
-  const anchors = document.querySelectorAll('a[href*="#"]')
+  const anchors = document.querySelectorAll('a[href*="#"]');
 
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
@@ -132,10 +231,6 @@ btn.addEventListener('click',function () {
   }
 })();
 
-
-(()=>{
-
-})();
 
 
 //кнопка на вверх
