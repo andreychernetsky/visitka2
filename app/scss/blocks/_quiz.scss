@@ -1,4 +1,5 @@
 .quiz{
+  height:auto;
   margin:30px auto;
   width: 600px;
   max-width: 100%;
@@ -11,6 +12,7 @@
     font-size: 1rem;
     font-weight:600;
     text-align: center;
+    padding:20px 0;
   }
   &__correct {
     border:1px solid green;
@@ -19,7 +21,7 @@
     border:1px solid red;
   }
   &__button {
-    margin:20px 0;
+    padding:5px 5px;
     width: auto;
     color:#fff;
     background-color:darkcyan;
